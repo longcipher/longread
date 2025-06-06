@@ -1,6 +1,6 @@
 base_url = "https://longcipher.github.io/longread"
 title = "LongRead"
-description = "Read with AI"
+description = "Daily Read Digest with AI"
 author = "LongRead"
 theme = "tabi"
 generate_feeds = true

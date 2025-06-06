@@ -1,116 +1,90 @@
-<p align="center">
-    <a href="https://www.getzola.org/">
-        <img src="https://img.shields.io/badge/powered_by-Zola-brightgreen?style=flat-square&labelColor=202b2d&color=087e96" alt="Built with Zola"></a>
-    <a href="https://github.com/welpo/tabi">
-        <img src="https://img.shields.io/badge/theme-tabi-0?style=flat-square&labelColor=202b2d&color=087e96" alt="tabi theme"></a>
-    <a href="https://welpo.github.io/tabi/blog/mastering-tabi-settings/">
-        <img src="https://img.shields.io/badge/docs-here-0?style=flat-square&labelColor=202b2d&color=087e96" alt="Documentation"></a>
-</p>
+# LongRead
 
-# tabi start
+Your Intelligent Content Aggregator & Analyst
 
-Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https://github.com/welpo/tabi).
+**Your feeds, your way!**
+**All feeds, one place!**
+**Read faster, know more!**
 
-![Screenshot of tabi theme](https://cdn.jsdelivr.net/gh/welpo/tabi@main/light_dark_screenshot.png)
+**Elevator Pitch:** Tired of information silos and manual content processing? LongRead dynamically aggregates content from any website (even those without RSS!), cleans it, translates it, and leverages AI to provide targeted analysis, like daily investment insights from news feeds.
 
-## Quick start
+---
 
-1. On the top right of this page, click "Use this template" → "Create a new repository"
-2. Replace placeholders in `content/_index.md` and in the first four lines of `config.toml`
-3. Save your profile photo to `static/img/profile.webp` (or change the path to your image in `content/_index.md`)
-4. Start writing in `content/blog/`. See `content/blog/hello.md` for an example
+## 🎯 The Problem
 
-**Note**: an error like `Tried to build search index for language ko which is not supported`, means Zola does not support search for that language. To disable search, set `build_search_index = false` in `config.toml`
+In today's fast-paced digital world, staying informed is crucial, but challenging:
 
-> [!TIP]
-> Take a look through `config.toml` to customise further (set up [social links](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-icons), your [email](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#encoded-email)…). The [Mastering tabi Settings](https://welpo.github.io/tabi/blog/mastering-tabi-settings/) guide has more details.
+1.  **Information Overload:** Content is scattered across countless platforms (blogs, news sites, Medium, Reddit, GitHub, Twitter).
+2.  **Lack of Standardization:** Many modern platforms don't offer traditional RSS feeds, making automated aggregation difficult.
+3.  **Messy Data:** Raw content from the web is often cluttered with unnecessary HTML, inconsistent formatting, and character encoding issues.
+4.  **Language Barriers:** Valuable information can be inaccessible if it's not in a language you understand.
+5.  **Actionable Insights Gap:** Simply collecting information isn't enough. Users need synthesized summaries and analyses to make informed decisions (e.g., understanding market sentiment for investments).
 
-## File structure
+---
 
-```tree
-├── config.toml              # Site configuration
-├── content/
-│   ├── _index.md            # Home page
-│   ├── archive/             # Archive page
-│   │   └── _index.md        # Archive page section
-│   ├── blog/                # Blog posts
-│   │   ├── hello.md         # Sample post
-│   │   └── _index.md        # Blog section configuration
-│   └── projects/            # Projects page
-│       ├── cool_project.md  # Sample project
-│       └── _index.md        # Projects section configuration
-│── static/
-│   └── img/
-│       └── profile.webp     # Profile photo for home page
-└── themes/
-    └── tabi/                # tabi theme
-```
+## ✨ Our Solution
 
-## Local development
+LongRead is a powerful, customizable content aggregation and analysis pipeline that transforms raw web data into clean, translated, and actionable intelligence.
 
-1. [Install Zola](https://www.getzola.org/documentation/getting-started/installation/)
-2. Clone your repository
-3. Run `git submodule update --init --recursive`
-4. Run `zola serve`
-5. Visit http://127.0.0.1:1111. You should see [this](https://tabi-start.pages.dev/).
+### Key Features:
 
-## Deployment
+1.  **Universal Source Aggregation:**
+    *   **Native RSS Support:** Seamlessly ingests existing RSS/Atom feeds.
+    *   **Dynamic RSS Generation:** For websites without RSS (independent blogs, Medium, Reddit, GitHub, Twitter, etc.), FeedFusion AI uses **CSS selectors** to scrape content and generate a valid RSS feed on the fly.
+2.  **Intelligent Data Cleansing & Formatting:**
+    *   Removes redundant HTML tags (scripts, styles, ads).
+    *   Corrects character encoding issues (mojibake).
+    *   Standardizes text formatting for improved readability.
+3.  **Automated Translation:**
+    *   Integrates with **Google Translate API** to translate content from any source language to your desired target language.
+4.  **AI-Powered Analysis & Summarization (via OPML tagging):**
+    *   **Customizable Analysis:** Users can tag specific feeds in their OPML file to trigger AI analysis.
+    *   **Example Use Case:** Mark news feeds for "investment analysis." FeedFusion AI will collect all articles from these feeds over the past day, synthesize them, and provide an investment perspective or summary.
+    *   Powered by state-of-the-art Large Language Models (LLMs).
+5.  **OPML Driven Configuration:**
+    *   Easily manage your feed sources, translation preferences, and analysis flags through a standard OPML file.
 
-Refer to the [Zola documentation](https://www.getzola.org/documentation/deployment/overview/):
+---
 
-- [AWS S3 Bucket](https://www.getzola.org/documentation/deployment/aws-s3/)
-- [Cloudflare Pages](https://www.getzola.org/documentation/deployment/cloudflare-pages/)
-- [Codeberg Pages](https://www.getzola.org/documentation/deployment/codeberg-pages/)
-- [Docker image](https://www.getzola.org/documentation/deployment/docker-image/)
-- [Edgio](https://www.getzola.org/documentation/deployment/edgio/)
-- [Fly.io](https://www.getzola.org/documentation/deployment/flyio/)
-- [GitHub Pages](https://www.getzola.org/documentation/deployment/github-pages/)
-- [GitLab Pages](https://www.getzola.org/documentation/deployment/gitlab-pages/)
-- [Netlify](https://www.getzola.org/documentation/deployment/netlify/)
-- [Sourcehut Pages](https://www.getzola.org/documentation/deployment/sourcehut/)
-- [Vercel](https://www.getzola.org/documentation/deployment/vercel/)
-- [Zeabur](https://www.getzola.org/documentation/deployment/zeabur/)
+## ⚙️ How It Works (High-Level Architecture)
 
-## Updating tabi
+1.  **Input:** User provides an OPML file specifying:
+    *   Feed URLs (RSS or website links).
+    *   CSS selectors (if not an RSS feed).
+    *   Target translation language.
+    *   Analysis tags (e.g., `analyze="news"`).
+2.  **Fetching:**
+    *   For RSS URLs: Fetch and parse the feed.
+    *   For Website URLs: Use CSS selectors to scrape relevant content sections.
+3.  **RSS Generation (if scraped):** Create a structured RSS feed from the scraped data.
+4.  **Cleaning:** Process each item's content:
+    *   Remove unwanted HTML tags.
+    *   Fix encoding issues.
+    *   Normalize formatting.
+5.  **Translation:** If a target language is specified, translate the cleaned content using Google Translate.
+6.  **AI Analysis:**
+    *   For feeds tagged for analysis, collect relevant items (e.g., last 24 hours).
+    *   Send the compiled content to an LLM with a specific prompt (e.g., "Summarize this news from an investment perspective, highlighting potential opportunities and risks.").
+7.  **Output:**
+    *   Cleaned, translated, and enriched RSS feeds.
+    *   AI-generated summaries and analyses (e.g., appended to a special feed or delivered as a daily digest).
+    *   Markdown format, easy to read and rendered in multi apps.
 
-### Automated updates
+## 🌟 Key Innovations & Why We're Cool
 
-This template includes a [GitHub Action workflow](https://github.com/welpo/tabi-start/blob/main/.github/workflows/update-tabi.yml) that checks for tabi theme updates weekly and creates a PR when updates are available.
+*   **Solves the "No RSS" Problem:** Our CSS selector-based scraping makes *any* site a potential feed source.
+*   **End-to-End Automation:** From raw web page to translated, analyzed insight without manual intervention.
+*   **Actionable Intelligence, Not Just Data:** The AI analysis layer transforms information into something users can act upon.
+*   **Highly Customizable:** Users define their sources, languages, prompts and the type of analysis they need.
+*   **Personalized Information Hub:** Empowers users to build their own perfectly tailored information dashboard.
 
-#### Setting up permissions
+---
 
-The automated updates require proper GitHub Actions permissions:
+## 🔮 Future Enhancements
 
-1. Go to your repository's Settings → Actions → General
-2. Scroll down to "Workflow permissions"
-3. Enable "Allow GitHub Actions to create and approve pull requests"
-4. Save changes
-
-<details>
-<summary>How automated updates work (click to read)</summary>
-
-- Every Monday at midnight (UTC), the workflow checks for new tabi versions
-- If an update is found, it creates a PR with:
-  - Detailed changelog
-  - Links to relevant commits and PRs
-  - The exact changes being made
-- It runs the Test build workflow. If the build fails, you'll receive an email notification. **Verify the site works locally before merging the PR**
-- You can review and merge these updates at your convenience
-
-</details>
-
-### Manual updates
-
-```bash
-git submodule update --remote themes/tabi
-```
-
-## Support
-
-- [tabi documentation](https://welpo.github.io/tabi/)
-- [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/)
-
-> [!TIP]
-> How was your experience with this template?
->
-> Share your thoughts in this [tabi discussion](https://github.com/welpo/tabi/discussions/440) or [report any issues](https://github.com/welpo/tabi/issues/new?&labels=bug&template=2_bug_report.yml) you find! Thank you 🙇🏼‍♂️
+*   **Web UI/Dashboard:** A user-friendly interface for managing feeds and viewing analyses.
+*   **More Sophisticated AI Models:** Fine-tuning models for specific analysis types (sentiment, trend detection, etc.).
+*   **Wider Range of Source Integrations:** Dedicated connectors for popular APIs (YouTube, binance, coingecko, specific social media).
+*   **Browser Extension:** To easily add new sites for scraping by visually selecting elements.
+*   **Error Handling & Resilience:** More robust error handling for scraping and API calls, with retries and notifications.
+*   **Content Caching:** To avoid re-fetching and re-processing unchanged content.
