@@ -1,10 +1,12 @@
 +++
-title = "Latest posts"
+title = "Latest Readings"
 
 [extra]
-header = { title = "Hi, I'm YOUR_NAME! 👋", img = "img/profile.webp", img_alt = "YOUR_NAME" }
+header = { title = "LongRead Daily Feeds! 👋", img = "img/profile.jpg", img_alt = "LongRead" }
 section_path = "blog/_index.md"
 max_posts = 5
 +++
 
-Welcome to my personal site!
+Your feeds, your way!
+All feeds, one place!
+Read faster, know more!

@@ -1,7 +1,7 @@
-base_url = "https://YOUR_URL.TLD"
-title = "site title"
-description = "YOUR_SITE_DESCRIPTION"
-author = "YOUR_NAME"
+base_url = "https://longcipher.gitub.io/longread"
+title = "LongRead"
+description = "Read with AI"
+author = "LongRead"
 theme = "tabi"
 generate_feeds = true
 compile_sass = true
@@ -230,10 +230,9 @@ invert_title_order = false
 # social_media_card = ""
 
 menu = [
-    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "readings", url = "blog", trailing_slash = true },
     { name = "archive", url = "archive", trailing_slash = true },
     { name = "tags", url = "tags", trailing_slash = true },
-    { name = "projects", url = "projects", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
