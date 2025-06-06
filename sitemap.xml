@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="https://longcipher.github.io/longread/sitemap_style.xsl" type="text/xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://longcipher.github.io/longread/</loc>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/archive/</loc>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/</loc>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/2025-06-02/</loc>
+        <lastmod>2025-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/2025-06-03/</loc>
+        <lastmod>2025-06-03</lastmod>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/2025-06-05/</loc>
+        <lastmod>2025-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/2025-06-06/</loc>
+        <lastmod>2025-06-06</lastmod>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/tags/</loc>
+    </url>
+    <url>
+        <loc>https://longcipher.github.io/longread/tags/daily/</loc>
+    </url>
+</urlset>
