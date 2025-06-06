@@ -2,6 +2,8 @@
 
 Your Intelligent Content Aggregator & Analyst
 
+[Online demo](https://longcipher.github.io/longread/)
+
 **Your feeds, your way!**
 **All feeds, one place!**
 **Read faster, know more!**
